@@ -1,0 +1,7 @@
+{
+    "name": "BoxScroll",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./BoxScrollController.js"
+  }
+  
