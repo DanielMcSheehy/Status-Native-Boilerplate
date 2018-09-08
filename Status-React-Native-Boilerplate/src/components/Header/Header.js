@@ -1,20 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 const styles = StyleSheet.create({
     headerOuterWrapper: {
       alignSelf: 'stretch',
       height: 200,
       display: 'flex',
-      alignItems: 'center',
+      
       justifyContent: 'center',
       backgroundColor: '#FFFFFF',
       shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: 'grey',
-        shadowOffset: { height: 0, width: 0 },
+        shadowOffset: { height: 0, width: 8 },
     },
     headerTitleWrapper: {
+        margin: 10,
         color: 'black',
         fontSize: 30,
         fontFamily: 'Helvetica',
@@ -22,10 +23,17 @@ const styles = StyleSheet.create({
     
   });
 
-const Header = ({  }) => {
+const Header = ({ toggleSideBar }) => {
     return (
         <View style={styles.headerOuterWrapper}>
-            <Text style={styles.headerTitleWrapper}>What</Text>
+            <View >
+                <Text style={styles.headerTitleWrapper}>&#9776;</Text>
+                <Button
+                    onPress={toggleSideBar}
+                    title="&#9776;"
+                    color="#841584"
+                />
+            </View>
             
       </View>
     );

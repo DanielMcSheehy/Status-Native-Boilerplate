@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import BoxScroll from './BoxScroll';
+import SideBar from './SideBar';
 
-class BoxScrollController extends React.Component {
+class SideBarController extends React.Component {
   constructor(prop) {
     super(prop);
     this.state = {
@@ -10,16 +10,19 @@ class BoxScrollController extends React.Component {
 };
 
 componentDidMount () { 
-    
+
 }
 
+  
 render() {
+    let show = 0;
     return( 
       <View>
-            <BoxScroll />
+            {show && <SideBar />}
       </View>
     );
   }
+
 }
 
-export default BoxScrollController;
+export default SideBarController;
