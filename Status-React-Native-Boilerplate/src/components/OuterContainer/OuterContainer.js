@@ -28,12 +28,11 @@ render() {
           backgroundColor: '#FFFFFF',
         },
         container: {
-            flex: 1,
+           
           backgroundColor: '#F7F8FE',
           flexDirection: 'column',
         },
         content: {
-            
         }
       });
 

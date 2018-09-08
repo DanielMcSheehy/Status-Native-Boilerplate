@@ -12,14 +12,12 @@ class SideBarController extends React.Component {
 componentDidMount () { 
 
 }
-
   
 render() {
-  
-    
+    let sideBarContent = ["Home", "Analytics", "Contact" ];
     return( 
       <View>
-            {this.props.display && <SideBar />}
+            {this.props.display && <SideBar sideBarContent={sideBarContent} />}
       </View>
     );
   }
