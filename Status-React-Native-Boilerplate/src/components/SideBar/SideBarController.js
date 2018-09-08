@@ -15,10 +15,11 @@ componentDidMount () {
 
   
 render() {
-    let show = 0;
+  
+    
     return( 
       <View>
-            {show && <SideBar />}
+            {this.props.display && <SideBar />}
       </View>
     );
   }

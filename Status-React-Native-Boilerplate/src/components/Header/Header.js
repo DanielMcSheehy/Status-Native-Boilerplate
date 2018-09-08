@@ -3,22 +3,19 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 const styles = StyleSheet.create({
     headerOuterWrapper: {
-      alignSelf: 'stretch',
+      
       height: 200,
       display: 'flex',
-      
+      alignItems: 'flex-start',
       justifyContent: 'center',
       backgroundColor: '#FFFFFF',
       shadowOpacity: 0.75,
-        shadowRadius: 5,
-        shadowColor: 'grey',
-        shadowOffset: { height: 0, width: 8 },
+    shadowRadius: 5,
+    shadowColor: 'grey',
+    shadowOffset: { height: 0, width: 8 },
     },
     headerTitleWrapper: {
-        margin: 10,
-        color: 'black',
-        fontSize: 30,
-        fontFamily: 'Helvetica',
+        fontSize: 50,
     },
     
   });
@@ -27,8 +24,8 @@ const Header = ({ toggleSideBar }) => {
     return (
         <View style={styles.headerOuterWrapper}>
             <View >
-                <Text style={styles.headerTitleWrapper}>&#9776;</Text>
                 <Button
+                    titleStyle={styles.headerTitleWrapper}
                     onPress={toggleSideBar}
                     title="&#9776;"
                     color="#841584"

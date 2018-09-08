@@ -7,21 +7,17 @@ class HeaderController extends React.Component {
     super(prop);
     this.state = {
   };
-  this.toggleSideBar = this.toggleSideBar.bind(this);
 };
 
 componentDidMount () { 
     
 }
 
-toggleSideBar() {
-  alert('what');
-}
 
 render() {
     return( 
       <View>
-            <Header toggleSideBar={this.toggleSideBar} />
+            <Header toggleSideBar={this.props.toggleSideBar} />
       </View>
     );
   }

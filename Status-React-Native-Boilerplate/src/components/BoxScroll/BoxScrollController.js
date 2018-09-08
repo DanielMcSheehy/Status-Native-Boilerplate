@@ -12,7 +12,7 @@ class BoxScrollController extends React.Component {
 };
 
 componentDidMount () {  //!
-  //this.getCoinPrices();
+  this.getCoinPrices();
 }
 
 getCoinPrices = async() => {
@@ -32,9 +32,6 @@ getCoinPrices = async() => {
     this.setState({priceData})
   }
   
-  
-
-
 render() {
     let contentText = this.state.priceData.map((coin) => {
       return {

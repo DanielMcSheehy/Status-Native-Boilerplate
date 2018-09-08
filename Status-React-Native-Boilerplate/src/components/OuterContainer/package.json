@@ -1,0 +1,7 @@
+{
+    "name": "OuterContainer",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./OuterContainer.js"
+  }
+  

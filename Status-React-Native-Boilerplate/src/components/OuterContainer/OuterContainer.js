@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Header from './src/components/Header/';
-import BoxScroll from './src/components/BoxScroll/'
-import SideBar from './src/components/SideBar/'
+import Header from '../Header';
+import BoxScroll from '../BoxScroll';
+import SideBar from '../SideBar';
 
 class OuterContainer extends React.Component {
   constructor(prop) {
@@ -18,31 +18,35 @@ componentDidMount () {
 }
 
 toggleSideBar() {
-    alert('what');
+    this.setState({sideBarVisibility: !this.state.sideBarVisibility});
 }
 
 render() {
     const styles = StyleSheet.create({
         outerWrapper: {
-          flex: 1,
           flexDirection: 'row',
+          backgroundColor: '#FFFFFF',
         },
         container: {
-          flex: 1,
+            flex: 1,
           backgroundColor: '#F7F8FE',
           flexDirection: 'column',
         },
+        content: {
+            
+        }
       });
 
     return( 
         <View style={styles.outerWrapper}>
-        <SideBar />
-         <View style={styles.container}>
-        
-         <Header />
-         <BoxScroll />
-        
-        </View>
+            <SideBar display={this.state.sideBarVisibility} />
+            <View style={styles.container}>      
+                <Header toggleSideBar={this.toggleSideBar} />
+                <View style={styles.content}>  
+                  <BoxScroll />
+                </View>
+            </View>
+            
       </View>
     );
   }

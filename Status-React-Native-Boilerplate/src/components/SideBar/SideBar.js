@@ -3,8 +3,8 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 const styles = StyleSheet.create({
     sideBarWrapper: {
-        flex: 1,
-        height: 805,
+
+        height: 1805,
         width: 75,
         display: 'flex',
         alignItems: 'center',
@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
 const SideBar = ({  }) => {
     return (
         <View style={styles.sideBarWrapper}>
-            
         </View>
     );
 }
