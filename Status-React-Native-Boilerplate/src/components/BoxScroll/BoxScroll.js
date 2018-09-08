@@ -5,10 +5,12 @@ const styles = StyleSheet.create({
     headerOuterWrapper: {
       height: 75,
       margin: 20,
+      padding: 5,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: '#FFFFFF',
+      borderRadius: 8,
       shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: 'grey',
@@ -25,6 +27,15 @@ const styles = StyleSheet.create({
 const BoxScroll = ({  }) => {
     return (
         <ScrollView horizontal={true}>
+            <View style={styles.headerOuterWrapper}>
+                <Text>What</Text>
+            </View>
+            <View style={styles.headerOuterWrapper}>
+                <Text>What</Text>
+            </View>
+            <View style={styles.headerOuterWrapper}>
+                <Text>What</Text>
+            </View>
             <View style={styles.headerOuterWrapper}>
                 <Text>What</Text>
             </View>
